@@ -37,6 +37,9 @@ struct Cacheline {
 struct Cacheset {
     Cacheline* cachelines;
     u8* stack;
+
+    u64 pop(u64 cache_mapping_ways);
+    u64 push(u64 cache_mapping_ways, u64 line_index);
 };
 
 class Cache{
@@ -64,7 +67,8 @@ class Cache{
         write_policy wp;
 
         u64 hit_count, miss_count;
-        // u64 read_count, write_count;
+        u64 read_hit, read_miss;
+        u64 write_hit, write_miss;
 
         // Cacheline* cachelines;
         Cacheset* cachesets;
@@ -74,6 +78,9 @@ class Cache{
 
         void init(u64 cache_size, u64 cache_line_size, u64 cache_mapping_ways, replacement_policy rp, write_policy wp);
         int check_hit(u64 set_index, u64 tag);
+        int get_free_line(u64 set_index);
+        int choose_victim(u64 set_index, u64 tag);
+        void replace(u64 set_index, u64 line_index, u64 tag);
         void read(u64 address);
         void write(u64 address);
         void load_trace(const char* filename);

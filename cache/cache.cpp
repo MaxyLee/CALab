@@ -88,20 +88,64 @@ int Cache::check_hit(u64 set_index, u64 tag) {
     for (int i = 0; i < cache_mapping_ways; i++) {
         if (cachesets[set_index].cachelines[i].get_tag(tag_bytes, cache_t) == tag && 
             cachesets[set_index].cachelines[i].get_valid(tag_bytes)) {
+                hit_count++;
+                return i;
+        }
+    }
+    miss_count ++;
+    return -1;
+}
 
+int Cache::get_free_line(u64 set_index) {
+    for (int i = 0; i < cache_mapping_ways; i++) {
+        if (!cachesets[set_index].cachelines[i].get_valid(tag_bytes)) {
+            return i;
         }
     }
 }
 
+int Cache::choose_victim(u64 set_index, u64 tag) {
+    switch(rp) {
+        case LRU:
+            
+            break;
+        default:
+            printf("error! no such replacement policy!\n");
+    }
+}
+
+void Cache::replace(u64 set_index, u64 line_index, u64 tag) {
+    cachesets[set_index].cachelines[line_index].set_tag(tag_bytes, cache_t, tag);
+    cachesets[set_index].cachelines[line_index].set_valid(tag_bytes, true);
+}
+
 void Cache::read(u64 address) {
+    u64 tag, set_index;
+    int line_index, repl_line;
+    tag = address >> (cache_b + cache_s);
+    set_index = (address >> cache_b) % cache_set_num;
+    line_index = check_hit(set_index, tag);
+    if(line_index >= 0) {
+        read_hit++;
+    } else {
+        read_miss++;
+        repl_line = get_free_line(set_index);
+        if (repl_line < 0) {
+            repl_line = choose_victim(set_index, tag);
+        }
+        replace(set_index, repl_line, tag);
+    }
+
     #ifdef DEBUG
         printf("read 0x%llx\n", address);
+        printf("tag: %lld\n", tag);
+        printf("set: %lld\n", set_index);
+        if(line_index >= 0) {
+            printf("hit line %d\n", line_index);
+        } else {
+            printf("miss, replace line %d\n", repl_line);
+        }
     #endif
-    u64 tag, index;
-    int line_index;
-    tag = address >> (cache_b + cache_s);
-    index = (address >> cache_b) % cache_set_num;
-
 }
 
 void Cache::write(u64 address) {

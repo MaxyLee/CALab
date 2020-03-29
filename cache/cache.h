@@ -1,10 +1,8 @@
 #pragma once
 #define DEBUG
-// #include <cstring>
-
-// using namespace std;
 
 typedef unsigned long long u64;
+typedef unsigned short u16;
 typedef unsigned char u8;
 
 enum replacement_policy: u8 {
@@ -37,6 +35,7 @@ struct Cacheline {
 struct Cacheset {
     Cacheline* cachelines;
     u8* stack;
+    u16* dstack;
 
     u64 get_bottom(u64 cache_mapping_ways);
     u64 get(u64 cache_mapping_ways, u64 index);
@@ -51,6 +50,11 @@ class Cache{
             "write through not allocate",
             "write back allocate", 
             "write back not allocate", 
+        };
+        const char* repl_policy[3] = {
+            "LRU",
+            "RAND",
+            "BT",
         };
 
         u64 cache_size;

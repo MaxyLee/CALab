@@ -38,13 +38,15 @@ struct Cacheset {
     Cacheline* cachelines;
     u8* stack;
 
-    u64 pop(u64 cache_mapping_ways);
-    u64 push(u64 cache_mapping_ways, u64 line_index);
+    u64 get_bottom(u64 cache_mapping_ways);
+    u64 get(u64 cache_mapping_ways, u64 index);
+    u64 find(u64 cache_mapping_ways, u64 line_index);
+    void push(u64 cache_mapping_ways, u64 line_index);
 };
 
 class Cache{
     public:
-        const char* repl_policy[4] = {
+        const char* w_policy[4] = {
             "write through allocate",
             "write through not allocate",
             "write back allocate", 

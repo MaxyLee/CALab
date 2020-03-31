@@ -55,13 +55,21 @@ u64 Cacheset::get_bottom(u64 cache_mapping_ways) {
     u64 bottom = get(cache_mapping_ways, cache_mapping_ways - 1);
     switch(cache_mapping_ways) {
         case 8:
-            // bottom = u64(stack[2] >> 5);
             stack[2] = (stack[2] << 3) + (stack[1] >> 5);
             stack[1] = (stack[1] << 3) + (stack[0] >> 5);
             stack[0] = (stack[0] << 3) + u8(bottom);
             break;
         case 4:
             stack[0] = (stack[0] << 6) + u8(bottom);
+            break;
+        case 1 << 11:
+        case 1 << 12:
+        case 1 << 14:
+            for (int i = cache_mapping_ways - 1; i > 0; i--) {
+                dstack[i] = dstack[i - 1];
+            }
+            dstack[0] = u16(bottom);
+            break;
         default:
             printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
     }
@@ -99,6 +107,11 @@ u64 Cacheset::get(u64 cache_mapping_ways, u64 index) {
             break;
         case 4:
             return u64((stack[0] >> (2 * index)) & 0b11);
+        case 1 << 11:
+        case 1 << 12:
+        case 1 << 14:
+            return u64(dstack[index]);
+            break;
         default:
             printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
     }
@@ -108,14 +121,23 @@ u64 Cacheset::find(u64 cache_mapping_ways, u64 line_index) {
     switch(cache_mapping_ways) {
         case 8:
             for (u64 i = 0; i < 8; i++) {
-                if(line_index == get(8, i)) {
+                if (line_index == get(8, i)) {
                     return i;
                 }
             }
             break;
         case 4:
             for (u64 i = 0; i < 4; i++) {
-                if(line_index == get(4, i)) {
+                if (line_index == get(4, i)) {
+                    return i;
+                }
+            }
+            break;
+        case 1 << 11:
+        case 1 << 12:
+        case 1 << 14:
+            for (u64 i = 0; i < cache_mapping_ways; i++) {
+                if (line_index == dstack[i]) {
                     return i;
                 }
             }
@@ -127,7 +149,7 @@ u64 Cacheset::find(u64 cache_mapping_ways, u64 line_index) {
 
 void Cacheset::push(u64 cache_mapping_ways, u64 line_index) {
     u64 stack_index = find(cache_mapping_ways, line_index);
-    u8 line = get(cache_mapping_ways, stack_index);
+    u16 line = u16(get(cache_mapping_ways, stack_index));
     #ifdef DEBUG
         printf("pushing line %lld at %lld\n", line_index, stack_index);
     #endif
@@ -195,6 +217,14 @@ void Cacheset::push(u64 cache_mapping_ways, u64 line_index) {
                     printf("stack index %lld is illegal!\n", stack_index);
             }
             break;
+        case 1 << 11:
+        case 1 << 12:
+        case 1 << 14:
+            for (int i = stack_index; i > 0; i--) {
+                dstack[i] = dstack[i - 1];
+            }
+            dstack[0] = line;
+            break;
         default:
             printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
     }
@@ -213,7 +243,7 @@ void Cache::init(u64 cache_size, u64 cache_line_size, u64 cache_mapping_ways, re
     this->cache_mapping_ways = cache_mapping_ways;
     this->rp = rp;
     this->wp = wp;
-    this->cache_set_num = cache_size / (cache_line_size * cache_mapping_ways);
+    this->cache_set_num = cache_line_num / cache_mapping_ways;
     this->cache_s = u64(log2(cache_set_num));
     this->cache_b = u64(log2(cache_line_size));
     this->cache_t = ADDRESS_SIZE - cache_b - cache_s;
@@ -243,13 +273,12 @@ void Cache::init(u64 cache_size, u64 cache_line_size, u64 cache_mapping_ways, re
                     cachesets[i].stack[0] = 0b11100100;
                     break;
                 case 1 << 11:
-                    cachesets[i].dstack = new u16[1 << 11];
-                    break;
                 case 1 << 12:
-                    cachesets[i].dstack = new u16[1 << 12];
-                    break;
                 case 1 << 14:
-                    cachesets[i].dstack = new u16[1 << 14];
+                    cachesets[i].dstack = new u16[cache_mapping_ways];
+                    for (int i = 0; i < cache_mapping_ways; i++) {
+                        cachesets[i].dstack[i] = i;
+                    }
                     break;
                 default:
                     printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
@@ -263,19 +292,29 @@ void Cache::init(u64 cache_size, u64 cache_line_size, u64 cache_mapping_ways, re
 
     #ifdef DEBUG
         printf("init:\nreplacement policy: %s\nwrite policy: %s\ntag bytes: %d\nmapping ways: %lld\nline size: %lld\n", repl_policy[int(rp)], w_policy[int(wp)], tag_bytes, cache_mapping_ways, cache_line_size);
+        printf("cache line num: %lld\n", cache_line_num);
+        printf("cache set num: %lld\n", cache_set_num);
         printf("t: %lld\ns: %lld\nb: %lld\n", cache_t, cache_s, cache_b);
     #endif
 }
 
 int Cache::check_hit(u64 set_index, u64 tag) {
+    #ifdef DEBUG
+        printf("checking set %lld\n", set_index);
+    #endif
+
     for (int i = 0; i < cache_mapping_ways; i++) {
+        #ifdef DEBUG
+            printf("line %d tag : %lld valid %d\n", i, cachesets[set_index].cachelines[i].get_tag(tag_bytes, cache_t), int(cachesets[set_index].cachelines[i].get_valid(tag_bytes)));
+        #endif
+
         if (cachesets[set_index].cachelines[i].get_tag(tag_bytes, cache_t) == tag && 
             cachesets[set_index].cachelines[i].get_valid(tag_bytes)) {
                 hit_count++;
                 return i;
         }
     }
-    miss_count ++;
+    miss_count++;
     return -1;
 }
 
@@ -314,6 +353,10 @@ void Cache::replace(u64 set_index, u64 line_index, u64 tag) {
 }
 
 void Cache::read(u64 address) {
+    #ifdef DEBUG
+        printf("********************\nread 0x%llx\n", address);
+    #endif
+
     u64 tag, set_index;
     int line_index, repl_line;
     tag = address >> (cache_b + cache_s);
@@ -321,7 +364,6 @@ void Cache::read(u64 address) {
     line_index = check_hit(set_index, tag);
 
     #ifdef DEBUG
-        printf("********************\nread 0x%llx\n", address);
         printf("tag: %lld\n", tag);
         printf("set: %lld\n", set_index);
     #endif
@@ -366,10 +408,19 @@ void Cache::read(u64 address) {
         } else {
             printf("miss, replace line %d\n", repl_line);
         }
+        printf("LRU stack: ");
+        for (u64 i = 0; i < cache_mapping_ways; i++) {
+            printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+        }
+        printf("\n");
     #endif
 }
 
 void Cache::write(u64 address) {
+    #ifdef DEBUG
+        printf("********************\nwrite 0x%llx\n", address);
+    #endif
+
     u64 tag, set_index;
     int line_index, repl_line;
     tag = address >> (cache_b + cache_s);
@@ -377,7 +428,6 @@ void Cache::write(u64 address) {
     line_index = check_hit(set_index, tag);
 
     #ifdef DEBUG
-        printf("********************\nwrite 0x%llx\n", address);
         printf("tag: %lld\n", tag);
         printf("set: %lld\n", set_index);
     #endif
@@ -399,25 +449,25 @@ void Cache::write(u64 address) {
         write_miss++;
         switch(wp) {
             case write_through_allocate:
-                repl_line = get_free_line(set_index);
-                if (repl_line < 0) {
-                    #ifdef DEBUG
-                        printf("choose victim\n");
-                    #endif
-
-                    repl_line = choose_victim(set_index, tag);
-                } else {
-                    #ifdef DEBUG
-                        printf("get free line\n");
-                    #endif
-
-                    if (rp == LRU && cache_mapping_ways > 1) {
-                        cachesets[set_index].push(cache_mapping_ways, repl_line);
-                    }
-                }
-                replace(set_index, repl_line, tag);
             case write_back_allocate:
-                cachesets[set_index].cachelines[repl_line].set_dirty(tag_bytes, true);
+                repl_line = get_free_line(set_index);
+                    if (repl_line < 0) {
+                        #ifdef DEBUG
+                            printf("choose victim\n");
+                        #endif
+
+                        repl_line = choose_victim(set_index, tag);
+                    } else {
+                        #ifdef DEBUG
+                            printf("get free line\n");
+                        #endif
+
+                        if (rp == LRU && cache_mapping_ways > 1) {
+                            cachesets[set_index].push(cache_mapping_ways, repl_line);
+                        }
+                    }
+                    replace(set_index, repl_line, tag);
+                // cachesets[set_index].cachelines[repl_line].set_dirty(tag_bytes, true);
 
                 #ifdef DEBUG
                     printf("replaced line %d\n", repl_line);
@@ -434,6 +484,13 @@ void Cache::write(u64 address) {
                 printf("illegal write policy: %d\n", int(wp));
         }
     }
+    #ifdef DEBUG
+        printf("LRU stack: ");
+        for (u64 i = 0; i < cache_mapping_ways; i++) {
+            printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+        }
+        printf("\n");
+    #endif
 }
 
 void Cache::load_trace(const char* filename) {

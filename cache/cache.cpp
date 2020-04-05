@@ -5,7 +5,6 @@
 #include <cstring>
 #include <ctime>
 
-using namespace std;
 
 u64 Cacheline::get_tag(int tag_bytes, u64 cache_t) {
     u64 tag = 0;
@@ -28,11 +27,7 @@ void Cacheline::set_tag(int tag_bytes, u64 cache_t, u64 tag) {
     for (int i = 0; i < tag_bytes - 1; i++) {
         tags[i] = u8(tag >> i * 8);
     }
-    u8 mask = 1;
-    for (int i = 0; i < cache_t - (tag_bytes - 1) * 8; i++) {
-        mask = (mask << 1) + 1;
-    }
-    tags[tag_bytes - 1] = (tags[tag_bytes - 1] & (0b11 << 6)) + u8((tag >> ((tag_bytes - 1) * 8)) & mask);
+    tags[tag_bytes - 1] = (tags[tag_bytes - 1] & (0b11 << 6)) + u8(tag >> ((tag_bytes - 1) * 8));
 }
 
 void Cacheline::set_valid(int tag_bytes, bool valid) {
@@ -160,38 +155,31 @@ void Cacheset::push(u64 cache_mapping_ways, u64 line_index) {
                 case 0:
                     break;
                 case 1:
-                    // line = (stack[0] >> 3) % 8;
                     stack[0] = (stack[0] & 0b11000000) + ((stack[0] & 0b111) << 3) + line;
                     break;
                 case 2:
-                    // line = ((stack[1] & 0b1) << 2) + (stack[0] >> 6);
                     stack[1] = (stack[1] & 0b11111110) + ((stack[0] >> 5) & 0b1);
                     stack[0] = (stack[0] << 3) + line;
                     break;
                 case 3:
-                    // line = (stack[1] >> 1) & 0b111;
                     stack[1] = (stack[1] & 0b11110000) + ((stack[1] & 0b1) << 3) + (stack[0] >> 5);
                     stack[0] = (stack[0] << 3) + line;
                     break;
                 case 4:
-                    // line = (stack[1] >> 4) & 0b111;
                     stack[1] = (stack[1] & 0b10000000) + ((stack[1] & 0b1111) << 3) + (stack[0] >> 5);
                     stack[0] = (stack[0] << 3) + line;
                     break;
                 case 5:
-                    // line = ((stack[2] & 0b11) << 1) + (stack[1] >> 7);
                     stack[2] = (stack[2] & 0b11111100) + ((stack[1] >> 5) & 0b11);
                     stack[1] = (stack[1] << 3) + (stack[0] >> 5);
                     stack[0] = (stack[0] << 3) + line;
                     break;
                 case 6:
-                    // line = (stack[2] >> 2) & 0b111;
                     stack[2] = (stack[2] & 0b11100000) + ((stack[2] & 0b11) << 3) + (stack[1] >> 5);
                     stack[1] = (stack[1] << 3) + (stack[0] >> 5);
                     stack[0] = (stack[0] << 3) + line;
                     break;
                 case 7:
-                    // line = stack[2] >> 5;
                     stack[2] = (stack[2] << 3) + (stack[1] >> 5);
                     stack[1] = (stack[1] << 3) + (stack[0] >> 5);
                     stack[0] = (stack[0] << 3) + line;
@@ -230,6 +218,47 @@ void Cacheset::push(u64 cache_mapping_ways, u64 line_index) {
     }
 }
 
+
+
+u64 Cacheset::tree_get_bottom(u64 cache_mapping_ways) {
+    u64 index = 0;
+    u64 max = cache_mapping_ways  - 1;
+    while(index < max) {
+        if(tree_get(cache_mapping_ways, index) == 0) {
+            index = 2 * index + 1;
+        } else {
+            index = 2 * index + 2;
+        }
+    }
+    return index - max;
+}
+
+u64 Cacheset::tree_get(u64 cache_mapping_ways, u64 index) {
+    return u64((btree[index / 8] >> (7 - (index % 8))) & 1);
+}
+
+void Cacheset::tree_set(u64 cache_mapping_ways, u64 index, u8 value) {
+    btree[index / 8] = (value << (7 - (index % 8))) + (btree[index / 8] & mask[index % 8]);
+}
+
+void Cacheset::tree_access(u64 cache_mapping_ways, u64 line_index) {
+    u64 index = 0;
+    u64 left = 0;
+    u64 right = cache_mapping_ways;
+    while(right - left > 1) {
+        u64 middle = (left + right) / 2;
+        if (line_index < middle) {
+            tree_set(cache_mapping_ways, index, 1);
+            index = 2 * index + 1;
+            right = middle;
+        } else {
+            tree_set(cache_mapping_ways, index, 0);
+            index = 2 * index + 2;
+            left = middle;
+        }
+    }
+}
+
 Cache::Cache() {}
 
 Cache::~Cache() {
@@ -256,34 +285,49 @@ void Cache::init(u64 cache_size, u64 cache_line_size, u64 cache_mapping_ways, re
 
     for (int i = 0; i < cache_set_num; i++) {
         cachesets[i].cachelines = new Cacheline[cache_mapping_ways];
-        if (rp == LRU && cache_mapping_ways > 1) {
             for (int j = 0; j < cache_mapping_ways; j++) {
                 cachesets[i].cachelines[j].tags = new u8[tag_bytes];
                 memset(cachesets[i].cachelines[j].tags, 0, tag_bytes);
             }
-            switch(cache_mapping_ways) {
-                case 8:
-                    cachesets[i].stack = new u8[3];
-                    cachesets[i].stack[0] = 0b10001000;
-                    cachesets[i].stack[1] = 0b11000110;
-                    cachesets[i].stack[2] = 0b11111010;
-                    break;
-                case 4:
-                    cachesets[i].stack = new u8[1];
-                    cachesets[i].stack[0] = 0b11100100;
-                    break;
-                case 1 << 11:
-                case 1 << 12:
-                case 1 << 14:
-                    cachesets[i].dstack = new u16[cache_mapping_ways];
-                    for (int i = 0; i < cache_mapping_ways; i++) {
-                        cachesets[i].dstack[i] = i;
-                    }
-                    break;
-                default:
-                    printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
+            if (rp == LRU && cache_mapping_ways > 1) {
+                switch(cache_mapping_ways) {
+                    case 8:
+                        cachesets[i].stack = new u8[3];
+                        cachesets[i].stack[0] = 0b10001000;
+                        cachesets[i].stack[1] = 0b11000110;
+                        cachesets[i].stack[2] = 0b11111010;
+                        break;
+                    case 4:
+                        cachesets[i].stack = new u8[1];
+                        cachesets[i].stack[0] = 0b11100100;
+                        break;
+                    case 1 << 11:
+                    case 1 << 12:
+                    case 1 << 14:
+                        cachesets[i].dstack = new u16[cache_mapping_ways];
+                        for (int j = 0; j < cache_mapping_ways; j++) {
+                            cachesets[i].dstack[j] = u16(j);
+                        }
+                        break;
+                    default:
+                        printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
+                }
+            } else if (rp == BT && cache_mapping_ways > 1) {
+                switch(cache_mapping_ways) {
+                    case 8:
+                    case 4:
+                        cachesets[i].btree = new u8[1];
+                        cachesets[i].btree[0] = 0;
+                        break;
+                    case 1 << 11:
+                    case 1 << 12:
+                    case 1 << 14:
+                        cachesets[i].btree = new u8[cache_mapping_ways >> 3];
+                        memset(cachesets[i].btree, 0, cache_mapping_ways >> 3);
+                    default:
+                        printf("%lld mapping ways is illegal!\n", cache_mapping_ways);
+                }
             }
-        }
     }
 
     if (rp == RAND) {
@@ -324,6 +368,13 @@ int Cache::get_free_line(u64 set_index) {
             return i;
         }
     }
+    #ifdef DEBUG
+        printf("++++++++++++++++++++valids of set %lld\n", set_index);
+        for (int i = 0; i < cache_mapping_ways; i++) {
+            printf("%d: %d ", i, int(cachesets[set_index].cachelines[i].get_valid(tag_bytes)));
+        }
+        printf("\n++++++++++++++++++++\n");
+    #endif
     return -1;
 }
 
@@ -339,6 +390,12 @@ int Cache::choose_victim(u64 set_index, u64 tag) {
         case RAND:
             return rand() % cache_mapping_ways;
             break;
+        case BT:
+            if (cache_mapping_ways > 1) {
+                return int(cachesets[set_index].tree_get_bottom(cache_mapping_ways));
+            } else {
+                return 0;
+            }
         default:
             printf("error! no such replacement policy!\n");
     }
@@ -354,7 +411,7 @@ void Cache::replace(u64 set_index, u64 line_index, u64 tag) {
 
 void Cache::read(u64 address) {
     #ifdef DEBUG
-        printf("********************\nread 0x%llx\n", address);
+        printf("*************************\nread 0x%llx\n", address);
     #endif
 
     u64 tag, set_index;
@@ -369,17 +426,19 @@ void Cache::read(u64 address) {
     #endif
 
     if (line_index >= 0) {
-        #ifdef DEBUG
-            printf("hit\n");
+        #ifdef LOG
+            printf("Hit\n");
         #endif
 
         read_hit++;
         if (rp == LRU && cache_mapping_ways > 1) {
             cachesets[set_index].push(cache_mapping_ways, line_index);
+        } else if (rp == BT && cache_mapping_ways > 1) {
+            cachesets[set_index].tree_access(cache_mapping_ways, line_index);
         }
     } else {
-        #ifdef DEBUG
-            printf("miss\n");
+        #ifdef LOG
+            printf("Miss\n");
         #endif
 
         read_miss++;
@@ -397,6 +456,8 @@ void Cache::read(u64 address) {
 
             if (rp == LRU && cache_mapping_ways > 1) {
                 cachesets[set_index].push(cache_mapping_ways, repl_line);
+            } else if (rp == BT && cache_mapping_ways > 1) {
+                cachesets[set_index].tree_access(cache_mapping_ways, repl_line);
             }
         }
         replace(set_index, repl_line, tag);
@@ -408,17 +469,35 @@ void Cache::read(u64 address) {
         } else {
             printf("miss, replace line %d\n", repl_line);
         }
-        printf("LRU stack: ");
-        for (u64 i = 0; i < cache_mapping_ways; i++) {
-            printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+        if (rp == LRU && cache_mapping_ways > 1) {
+            printf("LRU stack: ");
+            for (u64 i = 0; i < cache_mapping_ways; i++) {
+                printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+            }
+            printf("\n");
+        } else if (rp == BT && cache_mapping_ways > 1) {
+            printf("--------------------\nBinary Tree:\n");
+            switch(cache_mapping_ways) {
+                case 4:
+                    printf("%lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 0));
+                    printf("%lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 1), cachesets[set_index].tree_get(cache_mapping_ways, 2));
+                    break;
+                case 8:
+                    printf("%lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 0));
+                    printf("%lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 1), cachesets[set_index].tree_get(cache_mapping_ways, 2));
+                    printf("%lld %lld %lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 3), cachesets[set_index].tree_get(cache_mapping_ways, 4), cachesets[set_index].tree_get(cache_mapping_ways, 5), cachesets[set_index].tree_get(cache_mapping_ways, 6));
+                    break;
+                default:
+                    break;
+            }
+            printf("--------------------\n");
         }
-        printf("\n");
     #endif
 }
 
 void Cache::write(u64 address) {
     #ifdef DEBUG
-        printf("********************\nwrite 0x%llx\n", address);
+        printf("*************************\nwrite 0x%llx\n", address);
     #endif
 
     u64 tag, set_index;
@@ -433,17 +512,19 @@ void Cache::write(u64 address) {
     #endif
 
     if(line_index >= 0) {
-        #ifdef DEBUG
+        #ifdef LOG
             printf("hit\n");
         #endif
 
         write_hit++;
         if(rp == LRU && cache_mapping_ways > 1) {
             cachesets[set_index].push(cache_mapping_ways, line_index);
+        } else if (rp == BT && cache_mapping_ways > 1) {
+            cachesets[set_index].tree_access(cache_mapping_ways, line_index);
         }
     } else {
-        #ifdef DEBUG
-            printf("miss\n");
+        #ifdef LOG
+            printf("Miss\n");
         #endif
 
         write_miss++;
@@ -451,23 +532,24 @@ void Cache::write(u64 address) {
             case write_through_allocate:
             case write_back_allocate:
                 repl_line = get_free_line(set_index);
-                    if (repl_line < 0) {
-                        #ifdef DEBUG
-                            printf("choose victim\n");
-                        #endif
+                if (repl_line < 0) {
+                    #ifdef DEBUG
+                        printf("choose victim\n");
+                    #endif
 
-                        repl_line = choose_victim(set_index, tag);
-                    } else {
-                        #ifdef DEBUG
-                            printf("get free line\n");
-                        #endif
+                    repl_line = choose_victim(set_index, tag);
+                } else {
+                    #ifdef DEBUG
+                        printf("get free line\n");
+                    #endif
 
-                        if (rp == LRU && cache_mapping_ways > 1) {
-                            cachesets[set_index].push(cache_mapping_ways, repl_line);
-                        }
+                    if (rp == LRU && cache_mapping_ways > 1) {
+                        cachesets[set_index].push(cache_mapping_ways, repl_line);
+                    } else if (rp == BT && cache_mapping_ways > 1) {
+                        cachesets[set_index].tree_access(cache_mapping_ways, repl_line);
                     }
-                    replace(set_index, repl_line, tag);
-                // cachesets[set_index].cachelines[repl_line].set_dirty(tag_bytes, true);
+                }
+                replace(set_index, repl_line, tag);
 
                 #ifdef DEBUG
                     printf("replaced line %d\n", repl_line);
@@ -485,11 +567,29 @@ void Cache::write(u64 address) {
         }
     }
     #ifdef DEBUG
-        printf("LRU stack: ");
-        for (u64 i = 0; i < cache_mapping_ways; i++) {
-            printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+        if (rp == LRU && cache_mapping_ways > 1) {
+            printf("LRU stack: ");
+            for (u64 i = 0; i < cache_mapping_ways; i++) {
+                printf("%lld ", cachesets[set_index].get(cache_mapping_ways, i));
+            }
+            printf("\n");
+        } else if (rp == BT && cache_mapping_ways > 1) {
+            printf("--------------------\nBinary Tree:\n");
+            switch(cache_mapping_ways) {
+                case 4:
+                    printf("%lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 0));
+                    printf("%lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 1), cachesets[set_index].tree_get(cache_mapping_ways, 2));
+                    break;
+                case 8:
+                    printf("%lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 0));
+                    printf("%lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 1), cachesets[set_index].tree_get(cache_mapping_ways, 2));
+                    printf("%lld %lld %lld %lld\n", cachesets[set_index].tree_get(cache_mapping_ways, 3), cachesets[set_index].tree_get(cache_mapping_ways, 4), cachesets[set_index].tree_get(cache_mapping_ways, 5), cachesets[set_index].tree_get(cache_mapping_ways, 6));
+                    break;
+                default:
+                    break;
+            }
+            printf("--------------------\n");
         }
-        printf("\n");
     #endif
 }
 

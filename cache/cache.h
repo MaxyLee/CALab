@@ -1,5 +1,5 @@
 #pragma once
-#define DEBUG
+// #define DEBUG
 
 typedef unsigned long long u64;
 typedef unsigned short u16;
@@ -36,20 +36,37 @@ struct Cacheset {
     Cacheline* cachelines;
     u8* stack;
     u16* dstack;
+    u8* btree;
+
+    const u8 mask[8] = {
+        0b01111111,
+        0b10111111,
+        0b11011111,
+        0b11101111,
+        0b11110111,
+        0b11111011,
+        0b11111101,
+        0b11111110,
+    };
 
     u64 get_bottom(u64 cache_mapping_ways);
     u64 get(u64 cache_mapping_ways, u64 index);
     u64 find(u64 cache_mapping_ways, u64 line_index);
     void push(u64 cache_mapping_ways, u64 line_index);
+
+    u64 tree_get_bottom(u64 cache_mapping_ways);
+    u64 tree_get(u64 cache_mapping_ways, u64 index);
+    void tree_set(u64 cache_mapping_ways, u64 index, u8 value);
+    void tree_access(u64 cache_mapping_ways, u64 line_index);
 };
 
 class Cache{
     public:
         const char* w_policy[4] = {
-            "write through allocate",
-            "write through not allocate",
-            "write back allocate", 
-            "write back not allocate", 
+            "write_through_allocate",
+            "write_through_not_allocate",
+            "write_back_allocate", 
+            "write_back_not_allocate", 
         };
         const char* repl_policy[3] = {
             "LRU",
@@ -76,7 +93,6 @@ class Cache{
         u64 read_hit, read_miss;
         u64 write_hit, write_miss;
 
-        // Cacheline* cachelines;
         Cacheset* cachesets;
 
         Cache();

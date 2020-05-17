@@ -513,7 +513,7 @@ void Cache::write(u64 address) {
 
     if(line_index >= 0) {
         #ifdef LOG
-            printf("hit\n");
+            printf("Hit\n");
         #endif
 
         write_hit++;

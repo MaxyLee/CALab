@@ -1,0 +1,2408 @@
+System Clock: 0
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       0       0       0
+LD ,R2 ,0x0         1       0       0       0
+LD ,R3 ,0xffffffff  2       0       0       0
+ADD,R2 ,R1 ,R2      3       0       0       0
+MUL,R4 ,R1 ,R3      4       0       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 0 R2: 0 R3: 0 R4: 0 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 1
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       0       0
+LD ,R2 ,0x0         1       0       0       0
+LD ,R3 ,0xffffffff  2       0       0       0
+ADD,R2 ,R1 ,R2      3       0       0       0
+MUL,R4 ,R1 ,R3      4       0       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  Yes      0x3
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: LB1 R2: 0 R3: 0 R4: 0 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 2
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       0       0
+LD ,R2 ,0x0         1       2       0       0
+LD ,R3 ,0xffffffff  2       0       0       0
+ADD,R2 ,R1 ,R2      3       0       0       0
+MUL,R4 ,R1 ,R3      4       0       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  Yes      0x3
+LB2  Yes      0x0
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: LB1 R2: LB2 R3: 0 R4: 0 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 3
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       0       0
+LD ,R2 ,0x0         1       2       0       0
+LD ,R3 ,0xffffffff  2       3       0       0
+ADD,R2 ,R1 ,R2      3       0       0       0
+MUL,R4 ,R1 ,R3      4       0       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  Yes      0x3
+LB2  Yes      0x0
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: LB1 R2: LB2 R3: LB3 R4: 0 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 4
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       0
+LD ,R2 ,0x0         1       2       0       0
+LD ,R3 ,0xffffffff  2       3       0       0
+ADD,R2 ,R1 ,R2      3       4       0       0
+MUL,R4 ,R1 ,R3      4       0       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x0         9         10        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  Yes      0x3
+LB2  Yes      0x0
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: LB1 R2: Ars1 R3: LB3 R4: 0 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 5
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       0
+LD ,R2 ,0x0         1       2       5       0
+LD ,R3 ,0xffffffff  2       3       0       0
+ADD,R2 ,R1 ,R2      3       4       0       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       0       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x0         9         10        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x0         0x0         9         11        
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  Yes      0x3
+LB2  Yes      0x0
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: LB1 R2: Ars1 R3: LB3 R4: Mrs1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 6
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       0
+LD ,R3 ,0xffffffff  2       3       0       0
+ADD,R2 ,R1 ,R2      3       4       0       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       0       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x3         0x0         -1        10        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0x0         -1        11        
+Mrs2  Yes     0x0         0x3         11        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  Yes      0x0
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs2 R3: LB3 R4: Mrs1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 7
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       0
+ADD,R2 ,R1 ,R2      3       4       0       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       0       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x3         0x0         -1        -1        
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0x0         -1        11        
+Mrs2  Yes     0x0         0x3         11        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs2 R3: LB3 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 8
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       0
+ADD,R2 ,R1 ,R2      3       4       0       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       0       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x3         0x0         -1        -1        
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0x0         -1        11        
+Mrs2  Yes     0x0         0x3         11        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  Yes      0xffffffff
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: LB3 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 9
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x3         0x0         -1        -1        
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 10
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       0
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x3         0x0         -1        -1        
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 11
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       0       0
+DIV,R2 ,R3 ,R1      5       6       0       0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 12
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      0
+DIV,R2 ,R3 ,R1      5       6       12      0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 13
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      0
+DIV,R2 ,R3 ,R1      5       6       12      0
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       0       0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  Yes     0x0         0x3         7         -1        
+Ars3  Yes     0x3         0x0         -1        7         
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 14
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       0       0
+DIV,R2 ,R3 ,R1      9       14      0       0
+SUB,R4 ,R2 ,R1      10      0       0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  No 
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs1 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 15
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       0       0
+ADD,R2 ,R1 ,R2      7       8       0       0
+MUL,R4 ,R1 ,R3      8       9       15      0
+DIV,R2 ,R3 ,R1      9       14      0       0
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      0       0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         6         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  No 
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs1 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 16
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      0
+ADD,R2 ,R1 ,R2      7       8       16      0
+MUL,R4 ,R1 ,R3      8       9       15      0
+DIV,R2 ,R3 ,R1      9       14      0       0
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      0       0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         6         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  Yes     0x3         0x0         -1        6         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  No 
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars4 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 17
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      0
+ADD,R2 ,R1 ,R2      7       8       16      0
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      0       0
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      17      0       0
+DIV,R2 ,R3 ,R1      13      0       0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         6         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  Yes     0x3         0x0         -1        6         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars4 R3: -1 R4: Mrs2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 18
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      0
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      17      0       0
+DIV,R2 ,R3 ,R1      13      18      0       0
+SUB,R4 ,R2 ,R1      14      0       0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         6         -1        
+Ars2  No 
+Ars3  No 
+Ars4  Yes     0x3         0x0         -1        6         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Mrs2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 19
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      0
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      17      0       0
+DIV,R2 ,R3 ,R1      13      18      0       0
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      0       0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         6         -1        
+Ars2  Yes     0x0         0x3         8         -1        
+Ars3  No 
+Ars4  Yes     0x3         0x0         -1        6         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 20
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      17      0       0
+DIV,R2 ,R3 ,R1      13      18      0       0
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      0       0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         8         -1        
+Ars3  Yes     0x3         0x0         -1        8         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 21
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      0       0
+ADD,R2 ,R1 ,R2      11      16      0       0
+MUL,R4 ,R1 ,R3      12      17      21      0
+DIV,R2 ,R3 ,R1      13      18      0       0
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      21      0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         8         -1        
+Ars3  Yes     0x3         0x0         -1        8         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 22
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      0
+ADD,R2 ,R1 ,R2      11      16      22      0
+MUL,R4 ,R1 ,R3      12      17      21      0
+DIV,R2 ,R3 ,R1      13      18      22      0
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      21      0       0
+DIV,R2 ,R3 ,R1      17      0       0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         8         -1        
+Ars3  Yes     0x3         0x0         -1        8         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 23
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      0
+ADD,R2 ,R1 ,R2      11      16      22      0
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      0
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      21      0       0
+DIV,R2 ,R3 ,R1      17      23      0       0
+SUB,R4 ,R2 ,R1      18      0       0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         8         -1        
+Ars3  Yes     0x3         0x0         -1        8         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs2 R3: -1 R4: Mrs1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 24
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      21      0       0
+DIV,R2 ,R3 ,R1      17      23      0       0
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      0       0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         7         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs2 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 25
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      0       0
+ADD,R2 ,R1 ,R2      15      20      0       0
+MUL,R4 ,R1 ,R3      16      21      25      0
+DIV,R2 ,R3 ,R1      17      23      0       0
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      0       0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         7         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  Yes     0x3         0x0         -1        7         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars4 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 26
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      0
+ADD,R2 ,R1 ,R2      15      20      26      0
+MUL,R4 ,R1 ,R3      16      21      25      0
+DIV,R2 ,R3 ,R1      17      23      0       0
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      26      0       0
+DIV,R2 ,R3 ,R1      21      0       0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         7         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  Yes     0x3         0x0         -1        7         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0x3         0xffffffff  -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars4 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 27
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      0
+ADD,R2 ,R1 ,R2      15      20      26      0
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      0
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      26      0       0
+DIV,R2 ,R3 ,R1      21      27      0       0
+SUB,R4 ,R2 ,R1      22      0       0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         7         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  Yes     0x3         0x0         -1        7         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs1 R3: -1 R4: Mrs3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 28
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      0
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      26      0       0
+DIV,R2 ,R3 ,R1      21      27      0       0
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      0       0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         7         -1        
+Ars2  Yes     0x0         0x3         6         -1        
+Ars3  No 
+Ars4  Yes     0x3         0x0         -1        7         
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0xffffffff  0x3         -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs1 R3: -1 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 29
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      26      0       0
+DIV,R2 ,R3 ,R1      21      27      0       0
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      0       0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         6         -1        
+Ars3  Yes     0x3         0x0         -1        6         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  No 
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Ars2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 30
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      0       0
+ADD,R2 ,R1 ,R2      19      25      0       0
+MUL,R4 ,R1 ,R3      20      26      30      0
+DIV,R2 ,R3 ,R1      21      27      0       0
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      30      0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         6         -1        
+Ars3  Yes     0x3         0x0         -1        6         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 31
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      0
+ADD,R2 ,R1 ,R2      19      25      31      0
+MUL,R4 ,R1 ,R3      20      26      30      0
+DIV,R2 ,R3 ,R1      21      27      31      0
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      30      0       0
+DIV,R2 ,R3 ,R1      25      0       0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         6         -1        
+Ars3  Yes     0x3         0x0         -1        6         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0x3         0xffffffff  -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Ars3 R3: -1 R4: Mrs2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 32
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      0
+ADD,R2 ,R1 ,R2      19      25      31      0
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      0
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      30      0       0
+DIV,R2 ,R3 ,R1      25      32      0       0
+SUB,R4 ,R2 ,R1      26      0       0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  Yes     0x0         0x3         6         -1        
+Ars3  Yes     0x3         0x0         -1        6         
+Ars4  Yes     0x3         0x0         -1        -1        
+Ars5  No 
+Ars6  No 
+Mrs1  Yes     0xffffffff  0x3         -1        -1        
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Mrs2 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 33
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      30      0       0
+DIV,R2 ,R3 ,R1      25      32      0       0
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         8         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 34
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      0       0
+ADD,R2 ,R1 ,R2      23      29      0       0
+MUL,R4 ,R1 ,R3      24      30      34      0
+DIV,R2 ,R3 ,R1      25      32      0       0
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         8         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 35
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      0
+ADD,R2 ,R1 ,R2      23      29      35      0
+MUL,R4 ,R1 ,R3      24      30      34      0
+DIV,R2 ,R3 ,R1      25      32      0       0
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         8         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  Yes     0x3         0xffffffff  -1        -1        
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 36
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      0
+ADD,R2 ,R1 ,R2      23      29      35      0
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      0
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         8         -1        
+Ars2  Yes     0x0         0x3         -1        -1        
+Ars3  Yes     0x3         0x0         -1        -1        
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 37
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      0
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         8         -1        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  Yes     0xffffffff  0x3         -1        -1        
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: Mrs3 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 38
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      37
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: 0 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 39
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      37
+SUB,R4 ,R2 ,R1      26      33      0       0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: 0 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 40
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      37
+SUB,R4 ,R2 ,R1      26      33      40      0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: 0 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 41
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      37
+SUB,R4 ,R2 ,R1      26      33      40      0
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  Yes     0x0         0x3         -1        -1        
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: 0 R3: -1 R4: Ars1 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
+System Clock: 42
+---------------------------------------------------------------------
+Instruction:
+                    ID      IS      EX      WB
+LD ,R1 ,0x3         0       1       4       5
+LD ,R2 ,0x0         1       2       5       6
+LD ,R3 ,0xffffffff  2       3       7       8
+ADD,R2 ,R1 ,R2      3       4       9       10
+MUL,R4 ,R1 ,R3      4       5       12      13
+DIV,R2 ,R3 ,R1      5       6       12      13
+SUB,R4 ,R2 ,R1      6       7       16      17
+ADD,R2 ,R1 ,R2      7       8       16      17
+MUL,R4 ,R1 ,R3      8       9       15      16
+DIV,R2 ,R3 ,R1      9       14      18      19
+SUB,R4 ,R2 ,R1      10      15      22      23
+ADD,R2 ,R1 ,R2      11      16      22      23
+MUL,R4 ,R1 ,R3      12      17      21      22
+DIV,R2 ,R3 ,R1      13      18      22      23
+SUB,R4 ,R2 ,R1      14      19      26      27
+ADD,R2 ,R1 ,R2      15      20      26      27
+MUL,R4 ,R1 ,R3      16      21      25      26
+DIV,R2 ,R3 ,R1      17      23      27      28
+SUB,R4 ,R2 ,R1      18      24      31      32
+ADD,R2 ,R1 ,R2      19      25      31      32
+MUL,R4 ,R1 ,R3      20      26      30      31
+DIV,R2 ,R3 ,R1      21      27      31      32
+SUB,R4 ,R2 ,R1      22      28      35      36
+ADD,R2 ,R1 ,R2      23      29      35      36
+MUL,R4 ,R1 ,R3      24      30      34      35
+DIV,R2 ,R3 ,R1      25      32      36      37
+SUB,R4 ,R2 ,R1      26      33      40      41
+---------------------------------------------------------------------
+Reservation Station
+      Busy    Vj          Vk          Qj        Qk
+Ars1  No 
+Ars2  No 
+Ars3  No 
+Ars4  No 
+Ars5  No 
+Ars6  No 
+Mrs1  No 
+Mrs2  No 
+Mrs3  No 
+---------------------------------------------------------------------
+Load Buffer:
+     Busy     Address
+LB1  No 
+LB2  No 
+LB3  No 
+---------------------------------------------------------------------
+Register:
+R0: 0 R1: 3 R2: 0 R3: -1 R4: -3 R5: 0 R6: 0 R7: 0 
+R8: 0 R9: 0 R10: 0 R11: 0 R12: 0 R13: 0 R14: 0 R15: 0 
+R16: 0 R17: 0 R18: 0 R19: 0 R20: 0 R21: 0 R22: 0 R23: 0 
+R24: 0 R25: 0 R26: 0 R27: 0 R28: 0 R29: 0 R30: 0 R31: 0 
+************************************************************************
